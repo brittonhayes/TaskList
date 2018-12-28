@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Task List</title>
 </head>
@@ -17,9 +18,10 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <div id="main" class="card z-depth-5">
+        <div id="main" class="card z-depth-5 grey darken-2 white-text">
           <div class="card-content">
             <span class="card-title">To-Do List</span>
+            <i class="material-icons green-circle"></i>
             <blockquote>
               Add some tasks to your to-do list and delete finished ones!
             </blockquote>
@@ -29,7 +31,7 @@
                   <input type="text" name="task" id="task">
                   <label for="task">New Task</label>
                 </div>
-                <input type="submit" value="Add Task" class="btn teal lighten-1 ">
+                <input type="submit" value="Add Task" class="btn teal lighten-1 hoverable">
               </form>
             </div>
           </div>
