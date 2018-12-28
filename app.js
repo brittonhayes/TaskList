@@ -35,7 +35,7 @@ function getTasks() {
     // create li element
     const li = document.createElement('li');
     // add class
-    li.className = 'collection-item';
+    li.className = 'collection-item active';
     // create text node and append
     li.appendChild(document.createTextNode(task));
     // create new link element
@@ -43,7 +43,7 @@ function getTasks() {
     // add class
     link.className = 'delete-item secondary-content';
     // add icon html
-    link.innerHTML = '<i class="fas fa-times-circle red-text text-lighten-1"></i>';
+    link.innerHTML = '<i class="fas fa-times white-text text-lighten-1"></i>';
     // append link to li
     li.appendChild(link);
 
