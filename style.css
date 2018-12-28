@@ -1,7 +1,21 @@
 body {
-  /* background-color:#81d4fa; */
   background-color:#2b313c;
+}
 
+nav {
+  background-color: #2b313c;  
+}
+
+.night-mode nav {
+  background-color: #3f51b5   ;
+}
+
+.night-mode body {
+  background-color: #e1f5fe;
+}
+
+.night-mode #main{
+  background-color: #ef5350;
 }
 
 .container {
