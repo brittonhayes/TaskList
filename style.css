@@ -1,5 +1,7 @@
 body {
-  background-color:#81d4fa         ;
+  /* background-color:#81d4fa; */
+  background-color:#2b313c;
+
 }
 
 .container {
@@ -12,4 +14,8 @@ body {
   font-weight: 500;
   text-shadow: -1px 0px 3px rgba(114, 123, 123, 0.61);
   color: #252525;
+}
+
+i {
+  cursor: pointer;
 }
