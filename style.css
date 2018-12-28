@@ -1,3 +1,9 @@
 body {
-  background-color: #ef5350          ;
+  background-color:#26a69a                ;
+}
+
+.container {
+  margin-top: 3rem;
+  z-index: 1;
+
 }
