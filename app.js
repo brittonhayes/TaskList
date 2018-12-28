@@ -126,8 +126,8 @@ function removeTaskFromLocalStorage(taskItem) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
 
-  tasks.forEach(function(task, index){
-    if(taskItem.textContent === task){
+  tasks.forEach(function (task, index) {
+    if (taskItem.textContent === task) {
       tasks.splice(index, 1);
     }
   });
@@ -139,17 +139,17 @@ function removeTaskFromLocalStorage(taskItem) {
 // clear tasks
 function clearTasks() {
   while (taskList.firstChild) {
-    taskList.removeChild(taskList.firstChild),
-      (M.toast({
-        html: 'Item Deleted'
-      }));
+    taskList.removeChild(taskList.firstChild)
   }
+  (M.toast({
+    html: 'Item Deleted'
+  }));
 
   // Clear from ls
   clearTasksFromLocalStorage();
 }
 
-function clearTasksFromLocalStorage(){
+function clearTasksFromLocalStorage() {
   localStorage.clear();
 }
 
