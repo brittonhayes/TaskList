@@ -1,0 +1,51 @@
+// colors
+$colors: (primary: #2b313c,
+accent:#3f51b5,
+accent-dark:darken(#3f51b5, 40%),
+white: #e1f5fe);
+
+// spacing
+$padding: 15px;
+$borders: 15px;
+
+// functions
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+
+body {
+  background-color: color(primary);
+}
+
+nav {
+  background-color: color(primary);
+}
+
+
+.night-mode {
+  nav {
+    background-color: color(accent);
+  }
+
+  body {
+    background-color: color(white);
+  }
+}
+
+
+
+.container {
+  margin-top: 3rem;
+  z-index: 1;
+
+  .collection {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-shadow: -1px 0px 3px rgba(114, 123, 123, 0.61);
+  }
+
+  i {
+    cursor: pointer;
+  }
+}
