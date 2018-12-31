@@ -25,15 +25,7 @@ nav {
   background-color: color(primary);
 }
 
-li {
-  cursor: pointer;
-}
 
-.checked {
-  background-color: color(active-dark)!important;
-  color: color(white);
-  text-decoration: line-through;
-}
 
 .night-mode {
   nav {
@@ -57,5 +49,15 @@ li {
 
   i {
     cursor: pointer;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  .checked {
+    background-color: color(active-dark) !important;
+    color: color(white);
+    text-decoration: line-through;
   }
 }

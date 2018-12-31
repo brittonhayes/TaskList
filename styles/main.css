@@ -6,16 +6,6 @@ nav {
   background-color: #2b313c;
 }
 
-li {
-  cursor: pointer;
-}
-
-.checked {
-  background-color: #1d7d74 !important;
-  color: #e1f5fe;
-  text-decoration: line-through;
-}
-
 .night-mode nav {
   background-color: #3f51b5;
 }
@@ -37,5 +27,15 @@ li {
 
 .container i {
   cursor: pointer;
+}
+
+.container li {
+  cursor: pointer;
+}
+
+.container .checked {
+  background-color: #1d7d74 !important;
+  color: #e1f5fe;
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=main.css.map */

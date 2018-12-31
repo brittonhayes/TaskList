@@ -60,12 +60,12 @@ function addTask(e) {
       }),
       taskInput.value = '-';
   }
-  
+
   // create li element
   const li = document.createElement('li');
 
   // add class
-  li.className = 'collection-item white-text active';
+  li.className = 'collection-item white-text active child';
   // create text node and append
   li.appendChild(document.createTextNode(taskInput.value));
   // create new link element
@@ -76,16 +76,12 @@ function addTask(e) {
   link.innerHTML = '<i class="fas fa-times white-text text-lighten-1"></i>';
   // append link to li
   li.appendChild(link);
-
   // append ui to ul
   taskList.appendChild(li);
-
   // store in local storage
   storeTaskInLocalStorage(taskInput.value);
-
   // clear input
   taskInput.value = '';
-
   e.preventDefault();
 }
 
@@ -133,7 +129,6 @@ function removeTaskFromLocalStorage(taskItem) {
   });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
-
 }
 
 // clear tasks
@@ -165,4 +160,12 @@ function filterTasks(e) {
       task.style.display = 'none';
     }
   });
+}
+
+// mark clicked as checked
+var listItems = document.getElementsByClassName('child');
+for (var i = 0; i < listItems.length; i++) {
+  listItems[i].onclick = function () {
+    this.classList.toggle("checked");
+  };
 }
