@@ -65,7 +65,7 @@ function addTask(e) {
   const li = document.createElement('li');
 
   // add class
-  li.className = 'collection-item white-text active';
+  li.className = 'collection-item white-text please active';
   // create text node and append
   li.appendChild(document.createTextNode(taskInput.value));
   // create new link element

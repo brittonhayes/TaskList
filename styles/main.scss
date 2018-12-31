@@ -1,8 +1,11 @@
 // colors
 $colors: (primary: #2b313c,
 accent:#3f51b5,
-accent-dark:darken(#3f51b5, 40%),
-white: #e1f5fe);
+accent-dark:darken(#3f51b5, 20%),
+active: #26A69A,
+active-dark: darken(#26A69A, 10%),
+white: #e1f5fe,
+white-dark: darken(#e1f5fe, 40%));
 
 // spacing
 $padding: 15px;
@@ -22,6 +25,15 @@ nav {
   background-color: color(primary);
 }
 
+li {
+  cursor: pointer;
+}
+
+.checked {
+  background-color: color(active-dark)!important;
+  color: color(white);
+  text-decoration: line-through;
+}
 
 .night-mode {
   nav {
@@ -32,8 +44,6 @@ nav {
     background-color: color(white);
   }
 }
-
-
 
 .container {
   margin-top: 3rem;

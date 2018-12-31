@@ -67,15 +67,20 @@
       </div>
     </div>
 
-    <!-- inline-scripts -->
-    <script>
-    </script>
-
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./scripts/app.js"></script>
     <script src="./scripts/night.js"></script>
+
+    <script>
+      var el = document.querySelector('.collection');
+
+      el.onclick = function () {
+        el.firstChild.classList.toggle('checked');
+      };
+    </script>
+
 </body>
 
 </html>
