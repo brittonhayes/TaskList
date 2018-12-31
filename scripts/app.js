@@ -60,12 +60,12 @@ function addTask(e) {
       }),
       taskInput.value = '-';
   }
-
+  
   // create li element
   const li = document.createElement('li');
 
   // add class
-  li.className = 'collection-item white-text please active';
+  li.className = 'collection-item white-text active';
   // create text node and append
   li.appendChild(document.createTextNode(taskInput.value));
   // create new link element
