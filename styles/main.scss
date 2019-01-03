@@ -45,14 +45,14 @@ nav {
     text-transform: uppercase;
   }
 
-  i {
+  .fas {
     cursor: pointer;
     transition: 0.3s;
     margin-right: -12px;
     transition-timing-function: cubic-bezier(.11,.59,.22,1.53);
   }
 
-  i:hover {
+  .fas:hover {
     transform:translateY(-3px);
   }
 
