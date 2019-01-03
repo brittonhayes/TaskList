@@ -48,11 +48,11 @@ nav {
   i {
     cursor: pointer;
     transition: 0.3s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(.11,.59,.22,1.53);
   }
 
   i:hover {
-    transform:translateY(-2px);
+    transform:translateY(-3px);
   }
 
   .checked {
