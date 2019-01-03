@@ -63,9 +63,8 @@ function addTask(e) {
 
   // create li element
   const li = document.createElement('li');
-
   // add class
-  li.className = 'collection-item white-text active child';
+  li.className = 'collection-item white-text active';
   // create text node and append
   li.appendChild(document.createTextNode(taskInput.value));
   // create new link element
@@ -73,9 +72,19 @@ function addTask(e) {
   // add class
   link.className = 'delete-item secondary-content';
   // add icon html
-  link.innerHTML = '<i class="fas fa-times white-text text-lighten-1"></i>';
+  link.innerHTML = '<i class="fas fa-times white-text "></i>';
   // append link to li
   li.appendChild(link);
+
+   // create new link element
+   const linkB = document.createElement('a');
+   // add class
+   linkB.className = 'check-item secondary-content';
+   // add icon html
+   linkB.innerHTML = '<i class="fas fa-check white-text"></i>';
+   // append link to li
+   li.appendChild(linkB);
+
   // append ui to ul
   taskList.appendChild(li);
   // store in local storage
@@ -105,7 +114,8 @@ function removeTask(e) {
     if (M.toast({
         html: 'Item Deleted'
       })) {
-      e.target.parentElement.parentElement.remove();
+      e.target.parentElement.parentElement.remove(),
+      console.log(e.target.parentElement.parentElement),
 
       removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
@@ -163,9 +173,17 @@ function filterTasks(e) {
 }
 
 // mark clicked as checked
-var listItems = document.getElementsByClassName('child');
-for (var i = 0; i < listItems.length; i++) {
-  listItems[i].onclick = function () {
-    this.classList.toggle("checked");
-  };
-}
+// var listItems = document.getElementsByClassName('collection-item');
+// for (var i = 0; i < items.length; i++) {
+//   items[i].onclick = function () {
+//     items.classList.toggle("active")
+//   };
+// }
+
+// check the event
+// linkB.addEventListener('click', checkTask);
+// function checkTask(e) {
+//   if (e.target.classList.contains('check-item')) {
+//       e.target.parentElement.parentElement.classList.toggle('checked')
+//   }
+// }

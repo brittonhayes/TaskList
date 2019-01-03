@@ -25,8 +25,6 @@ nav {
   background-color: color(primary);
 }
 
-
-
 .night-mode {
   nav {
     background-color: color(accent);
@@ -51,7 +49,7 @@ nav {
     cursor: pointer;
   }
 
-  li {
+  .collection-item {
     cursor: pointer;
   }
 
