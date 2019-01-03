@@ -20,16 +20,16 @@ nav {
 }
 
 .container .collection {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .container i {
   cursor: pointer;
-  padding: 3px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin-right: -12px;
   -webkit-transition-timing-function: cubic-bezier(0.11, 0.59, 0.22, 1.53);
           transition-timing-function: cubic-bezier(0.11, 0.59, 0.22, 1.53);
 }

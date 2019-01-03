@@ -39,7 +39,7 @@ nav {
   z-index: 1;
 
   .collection {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 800;
     // text-shadow: -1px 0px 3px rgba(114, 123, 123, 0.61);
     text-transform: uppercase;
@@ -47,8 +47,8 @@ nav {
 
   i {
     cursor: pointer;
-    padding: 3px;
     transition: 0.3s;
+    margin-right: -12px;
     transition-timing-function: cubic-bezier(.11,.59,.22,1.53);
   }
 
