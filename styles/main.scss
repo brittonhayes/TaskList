@@ -5,9 +5,8 @@ accent-dark:darken(#3f51b5, 20%),
 active: #26A69A,
 active-dark: darken(#26A69A, 10%),
 white: #e1f5fe,
-white-dark: darken(#e1f5fe, 40%));
-
-// spacing
+white-dark: darken(#e1f5fe, 40%),
+light-blue: #02aaf3); // spacing
 $padding: 15px;
 $borders: 15px;
 
@@ -40,22 +39,20 @@ nav {
   z-index: 1;
 
   .collection {
-    font-size: 1.1em;
+    font-size: 1.4em;
     font-weight: 500;
-    text-shadow: -1px 0px 3px rgba(114, 123, 123, 0.61);
+    // text-shadow: -1px 0px 3px rgba(114, 123, 123, 0.61);
+    text-transform: uppercase;
   }
 
   i {
     cursor: pointer;
   }
 
-  .collection-item {
-    cursor: pointer;
-  }
-
   .checked {
-    background-color: color(active-dark) !important;
-    color: color(white);
+    background-color: color(accent) !important;
+    color: color(white) !important;
     text-decoration: line-through;
   }
+
 }

@@ -35,7 +35,7 @@ function getTasks() {
     // create li element
     const li = document.createElement('li');
     // add class
-    li.className = 'collection-item active';
+    li.className = 'collection-item grey-text text-darken-4';
     // create text node and append
     li.appendChild(document.createTextNode(task));
     // create new link element
@@ -43,9 +43,18 @@ function getTasks() {
     // add class
     link.className = 'delete-item secondary-content';
     // add icon html
-    link.innerHTML = '<i class="fas fa-times white-text text-lighten-1"></i>';
+    link.innerHTML = '<i class="fas fa-times red-text text-lighten-1"></i>';
     // append link to li
     li.appendChild(link);
+
+    // create new link element
+    const linkB = document.createElement('a');
+    // add class
+    linkB.className = 'check-item secondary-content';
+    // add icon html
+    linkB.innerHTML = '<i class="fas fa-check green-text"></i>';
+    // append link to li
+    li.appendChild(linkB);
 
     // append ui to ul
     taskList.appendChild(li);
@@ -64,7 +73,7 @@ function addTask(e) {
   // create li element
   const li = document.createElement('li');
   // add class
-  li.className = 'collection-item white-text active';
+  li.className = 'collection-item grey-text text-darken-4';
   // create text node and append
   li.appendChild(document.createTextNode(taskInput.value));
   // create new link element
@@ -72,18 +81,18 @@ function addTask(e) {
   // add class
   link.className = 'delete-item secondary-content';
   // add icon html
-  link.innerHTML = '<i class="fas fa-times white-text "></i>';
+  link.innerHTML = '<i class="fas fa-times red-text text-lighten-1"></i>';
   // append link to li
   li.appendChild(link);
 
-   // create new link element
-   const linkB = document.createElement('a');
-   // add class
-   linkB.className = 'check-item secondary-content';
-   // add icon html
-   linkB.innerHTML = '<i class="fas fa-check white-text"></i>';
-   // append link to li
-   li.appendChild(linkB);
+  // create new link element
+  const linkB = document.createElement('a');
+  // add class
+  linkB.className = 'check-item secondary-content';
+  // add icon html
+  linkB.innerHTML = '<i class="fas fa-check green-text"></i>';
+  // append link to li
+  li.appendChild(linkB);
 
   // append ui to ul
   taskList.appendChild(li);
@@ -115,9 +124,9 @@ function removeTask(e) {
         html: 'Item Deleted'
       })) {
       e.target.parentElement.parentElement.remove(),
-      console.log(e.target.parentElement.parentElement),
+        console.log(e.target.parentElement.parentElement),
 
-      removeTaskFromLocalStorage(e.target.parentElement.parentElement);
+        removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
   }
 }
@@ -172,18 +181,15 @@ function filterTasks(e) {
   });
 }
 
-// mark clicked as checked
-// var listItems = document.getElementsByClassName('collection-item');
-// for (var i = 0; i < items.length; i++) {
-//   items[i].onclick = function () {
-//     items.classList.toggle("active")
-//   };
-// }
-
 // check the event
-// linkB.addEventListener('click', checkTask);
-// function checkTask(e) {
-//   if (e.target.classList.contains('check-item')) {
-//       e.target.parentElement.parentElement.classList.toggle('checked')
-//   }
-// }
+document.addEventListener('click',
+  function (e) {
+    // var checkThis = document.getElementsByClassName('check-item');
+    // console.log('hello world');
+    if (e.target.parentElement.classList.contains('check-item')) {
+      e.target.parentElement.parentElement.classList.toggle('checked'),
+        e.target.classList.toggle('white-text')
+        // document.getElementsByClassName('delete-item').classList.toggle('white-text'),
+        // console.log(e.target.parentElement.parentElement)
+    }
+  });
