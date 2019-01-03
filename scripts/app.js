@@ -188,8 +188,9 @@ document.addEventListener('click',
     // console.log('hello world');
     if (e.target.parentElement.classList.contains('check-item')) {
       e.target.parentElement.parentElement.classList.toggle('checked'),
-        e.target.classList.toggle('white-text')
+        e.target.classList.toggle('white-text'),
+        e.target.parentElement.innerHTML = "COMPLETE"
         // document.getElementsByClassName('delete-item').classList.toggle('white-text'),
-        // console.log(e.target.parentElement.parentElement)
+        // console.log(e.target.parentElement.parentElement.textContent)
     }
   });
